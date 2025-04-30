@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-![open data 2025](./docs/Open-DataWeek-2025-Logo-4-1024x513.webp)
+![open data 2025](https://opensocialclusters.eu/wdev/wp-content/uploads/2020/04/external-content.duckduckgo.com_.png)
 
 # analyzing_urban_mortality_data
 Final project for Pratt Institute course [INFO-664](https://gofilipa.github.io/664/intro.html) that aims to analyze the causes of death across various U.S. cities by leveraging publicly available datasets accessed through open city data portals.
