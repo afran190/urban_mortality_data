@@ -8,22 +8,48 @@ Final project for Pratt Institute course [INFO-664](https://gofilipa.github.io/6
 
 ## Introduction
 
-*Project Title:* Analyzing Urban Mortality Data Through Open City APIs
+*Project Title:* Visible Deaths, Invisible Data: Mapping Mortality and its Gaps Across Cities
 
 *Project Description:* This project aims to analyze the causes of death across various U.S. cities by leveraging publicly available datasets accessed through open city data portals. Many municipalities now provide access to their data via APIs, often powered by platforms like Socrata, enabling efficient, programmatic retrieval of mortality-related statistics.
 
-While a significant portion of recent mortality data centers around COVID-19, this project also aims to try to focus toward other impactful, but less-publicized causes of death (if data is available). These can possibly include drug overdoses and fatalities among incarcerated individuals, with an interest in understanding how these figures may reflect or be influenced by local governance, healthcare policy, and criminal justice systems. Where available, international datasets may also be integrated for broader comparative analysis.
+ The research focuses on creating a comparative narrative instead of building a unified dataset by studying which causes of death different jurisdictions track and which remain unrecorded, or hidden, or inaccessible. Through utilizing open data APIs and data visualization tools, it will examine mortality patterns including overdose-related deaths, deaths in custody, and/or COVID-19 related deaths while exposing structural gaps in official records. Findings will focus equally on the missing data points as much as it does on the recorded information.
 
-*Project Rationale:* I am aiming to go beyond the surface-level data on mortality by exploring underlying causes that reflect societal issues such as substance abuse, public health policy, and industrial prison complex. Through comparative analysis and data visualization, the findings aim to spark discussion around local and national policy interventions, and promote a data-informed approach to improving public health outcomes.
+*Project Rationale:* Public knowledge and civic accountability depend heavily on government-mandated open data portals, which [NYC Open Data](https://opendata.cityofnewyork.us/) represents, as a fundamental resource. These systems demonstrate the policy-based priorities and exclusionary practices that exist within them. The New York City requirement of [Local Law 11](https://opendata.cityofnewyork.us/open-data-law/) demands public dataset publication, but Rikers Island along with other institutions remain in a state of inconsistent data disclosure. The process of making deaths visible in public discourse raises essential questions about transparency and oversight, and which deaths become visible to the public. The aim of this research is to investigate these tensions through the available data in municipalities across the country to analyze structural omissions and recordkeeping political dynamics in U.S cities.
 
-## Key research questions may include *(dependent on available data)*:
- - How do drug-related deaths vary between major urban areas, and how might these trends align with local public health initiatives or policy decisions?
- - Are there identifiable disparities in mortality rates among incarcerated populations across different jurisdictions?
- - Based on COVID-19 city-level infection / mortality data, can this reveal deeper socio-economic or policy-driven disparities that warrant public policy reconsideration?
+
+## Key Research Questions:
+ - What causes of death are publicly recorded in major city open data portals, and which categories (e.g., in-custody deaths, overdose deaths) are consistently missing or incomplete?
+ - How does the availability and granularity of mortality data vary across cities, and what policies or legal mandates shape this availability?
+ - In what ways do patterns of data omission correlate with social marginalization, such as incarceration, homelessness, or poverty?
+
 
 ## Methods and Workflows:
-To carry out this analysis, the project will use the following tools and technologies:
+To carry out this analysis, the project used the following tools, technologies, and methodologis:
 
- - **Data Collection**: APIs provided by city open data portals will be accessed using [`soda.py`](https://pypi.org/project/sodapy/), a Python library for the [Socrata Open Data API](https://dev.socrata.com/). This will allow for structured and automated data retrieval.
- - **Data Cleaning**: Any inconsistencies or gaps in the data will be managed using [OpenRefine](https://openrefine.org/), which excels at detecting and correcting anomalies in tabular datasets.
+ - **Data Collection**: APIs provided by city open data portals (e.g., NYC, Chicago, San Francisco,etc.) will be accessed using [`soda.py`](https://pypi.org/project/sodapy/), a Python library for the [Socrata Open Data API](https://dev.socrata.com/). This will allow for structured and automated data retrieval.
+      - These datasets include causes of death, location, demographic information, and occasionally context (e.g., whether the death occurred in custody). 
+
+ - **Data Cleaning**: Any format inconsistencies in the data will be managed using [OpenRefine](https://openrefine.org/), which excels at detecting and correcting anomalies in tabular datasets. This ensures accurate filtering and visualization.
+
  - **Data Analysis and Visualization**: Cleaned datasets will be analyzed using Python libraries such as [`pandas`](https://pandas.pydata.org/docs/) for data manipulation and [`plot.ly`](https://plotly.com/) for interactive visualizations. This will enable the exploration of trends and correlations across different variables and cities.
+
+ - **Documentation of Absences**: When a city does not provide a dataset on a particular type of death (e.g., in-custody fatalities), this absence will be noted and visually flagged, building a broader picture of structural omission.
+
+ ## Findings and Analysis:
+
+ Insert plot.ly visualizations and answers to research questions here 
+
+ ## Future Uses and Continuation of Research:
+This project offers a foundation for multiple options of future research or expansion:
+
+- **Comparative Policy Analysis**: Researchers can build on this work to study how data transparency laws differ across municipalities and how these differences affect public knowledge.
+
+- **Watchdog Tools**: Journalists or advocacy organizations could use the codebase to monitor cities’ compliance with open data laws or track patterns of omission.
+
+- **Public Interfaces**: With further development, the visualizations and findings could be adapted into a public-facing website or dashboard tracking absence of or lack of updates in municipal death records.
+
+
+ ## Project Files and Results:
+  - *Title here*: and description
+  - *Title here*: and description
+
