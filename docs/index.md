@@ -26,6 +26,8 @@ Final project for Pratt Institute course [INFO-664](https://gofilipa.github.io/6
 ## Methods and Workflows:
 To carry out this analysis, the project used the following tools, technologies, and methodologis:
 
+### Sources
+
  - **Data Collection**: APIs provided by city open data portals (e.g., NYC, Chicago, San Francisco,etc.) will be accessed using [`soda.py`](https://pypi.org/project/sodapy/), a Python library for the [Socrata Open Data API](https://dev.socrata.com/). This will allow for structured and automated data retrieval.
       - These datasets include causes of death, location, demographic information, and occasionally context (e.g., whether the death occurred in custody). 
 
