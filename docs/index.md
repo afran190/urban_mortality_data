@@ -80,7 +80,7 @@ results_df = pd.DataFrame.from_records(results)
 - Cleaned datasets were analyzed using Python libraries such as [`pandas`](https://pandas.pydata.org/docs/) for data manipulation and [`plot.ly`](https://plotly.com/) for interactive visualizations. This will enable the exploration of trends and correlations across different variables and cities.
 
 
-#### Examples by City
+     #### Examples by City: 
 
  - **NYC**:
       - A **pie chart** was created to show inmate deaths by correctional facility:
@@ -139,8 +139,9 @@ The notebook `city_data_tracker.ipynb` was used to:
 - Read in the CSV tracker as a DataFrame
 - Visually summarize absence patterns for reporting
 
- ## Findings and Analysis:
-Based on the compiled tracker, the analysis of publicly available death datasets across U.S. cities reveals notable inconsistencies in both data availability and transparency—particularly around inmate deaths, COVID-19 fatalities, and drug-related deaths. The “Special Notes” column in the spreadsheet surfaces key anomalies, gaps, and archival issues that significantly impact the comprehensiveness and usability of each dataset.
+
+## Findings and Analysis:
+- Based on the compiled tracker, the analysis of publicly available death datasets across U.S. cities reveals notable inconsistencies in both data availability and transparency—particularly around inmate deaths, COVID-19 fatalities, and drug-related deaths. The “Special Notes” column in the spreadsheet surfaces key anomalies, gaps, and archival issues that significantly impact the comprehensiveness and usability of each dataset.
 
 ---
 
@@ -186,7 +187,8 @@ This project offers a foundation for multiple options of future research or expa
 
 - **Public Interfaces**: With further development, the visualizations and findings from this project could be adapted into a public-facing website or dashboard tracking absence of or lack of updates in municipal death records.
 
-## Project Files:
+
+## Project Files: 
   - *New York City Data Sets*
      - **NYC_Data.ipynb**: Python Notebook containing NYC Open Data APIs calling data sets of Inmate, COVID-19, Drug-related deaths; accompained by different plot.ly data visualizations unique to each data set 
      - **NYC_inmate_data_unclean.csv and NYC_covid_data_unclean.csv**: saved csv's with uncleaned data pulled from NYC Open Data
