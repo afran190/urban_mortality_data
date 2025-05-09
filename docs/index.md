@@ -227,5 +227,5 @@ This project offers a foundation for multiple options of future research or expa
      - **available_data_types_by_city_plot.png**
      - **chicago_drug_none_plot.jpg**
      - **nyc_inmate_plot.png**
-     - **sf_covid_plot.jpg** 
-
+     - **sf_covid_plot.jpg*
+     8
