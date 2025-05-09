@@ -26,10 +26,36 @@ Final project for Pratt Institute course [INFO-664](https://gofilipa.github.io/6
 ## Methods and Workflows:
 To carry out this analysis, the project used the following tools, technologies, and methodologis:
 
-### Sources
+### Sources: 
+- APIs provided by city open data portals (e.g., NYC, Chicago, San Francisco, and Austin) have been accessed using [`soda.py`](https://pypi.org/project/sodapy/), a Python library for the [Socrata Open Data API](https://dev.socrata.com/). This allowed for structured and automated data retrieval.
+     - These cities were selected to represent different geographic regions of the United States and because they are generally regarded as progressive municipalities with strong commitments to transparency and civic data infrastructure. The assumption was that these cities would be more likely to publish comprehensive and well-maintained datasets.
+     - While searching through each open data portal, a wide range of keyword variations had to be used across the three subject categories (incarceration-related deaths, COVID-19 deaths, and drug-related deaths), in order to surface any relevant records, where available.
 
- - **Data Collection**: APIs provided by city open data portals (e.g., NYC, Chicago, San Francisco,etc.) will be accessed using [`soda.py`](https://pypi.org/project/sodapy/), a Python library for the [Socrata Open Data API](https://dev.socrata.com/). This will allow for structured and automated data retrieval.
-      - These datasets include causes of death, location, demographic information, and occasionally context (e.g., whether the death occurred in custody). 
+
+ - **Data Collection**: I utilized the NYC_data.ipynb Jupyter Notebook I created as the template for related investigations into other U.S. cities. NYC was selected as the foundational case study because it is the only city that offered (at least partial) data across all three of the research categories. 
+
+     - *Setting up Socrata*:
+          - To access datasets through city portals using the Socrata platform, I first created a user account, which enables access across any open data site powered by Socrata. 
+          - To avoid API rate limits, I also requested and configured an “App Token” for authenticated access—an example of which is provided later in this notebook. 
+          - Finally, I installed the required Python library, sodapy, directly into my Jupyter notebook using the following command:
+          `!pip install sodapy`
+
+     - *Calling in APIs*:
+          -Began with authenticatication via the Socrata Open Data API for each data set I called in. In total nine data sets across the 4 cities were retrieved, although some returned data that did not align with my research scope:
+          `from sodapy import Socrata
+
+               client = Socrata(
+               "data.cityofnewyork.us", #varies based on URL of each city 
+               "YOUR_APP_TOKEN",  # Replaced with my personal app token
+               username="your_email@example.com",
+               password="your_password"
+               )`
+          -Then I pulled each individual date set through the below identifiers:
+          `results = client.get("f64t-5yiv", limit=1000) #changed each Data Set Identifier and limit based on each data set
+           results_df = pd.DataFrame.from_records(results)
+
+
+
 
  - **Data Cleaning**: Any format inconsistencies in the data will be managed using [OpenRefine](https://openrefine.org/), which excels at detecting and correcting anomalies in tabular datasets. This ensures accurate filtering and visualization.
 
