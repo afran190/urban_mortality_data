@@ -80,12 +80,12 @@ results_df = pd.DataFrame.from_records(results)
 - Cleaned datasets were analyzed using Python libraries such as [`pandas`](https://pandas.pydata.org/docs/) for data manipulation and [`plot.ly`](https://plotly.com/) for interactive visualizations. This will enable the exploration of trends and correlations across different variables and cities.
 
 
-     #### Examples by City
+#### Examples by City
 
-     - **NYC**:
-          - A **pie chart** was created to show inmate deaths by correctional facility:
-          
-          ```python
+ - **NYC**:
+      - A **pie chart** was created to show inmate deaths by correctional facility:
+
+     ```python
           import plotly.express as px
 
           facility_counts = df_inmate['facility'].value_counts().reset_index()
@@ -175,8 +175,7 @@ Despite NYC’s Local Law 11 mandating open data publication, these limitations 
 - **Drug death reporting varies widely.** Some cities provide sex/ethnicity data; others publish only raw totals.
 - **Open data laws (e.g., NYC’s Local Law 11)** don’t appear to fully apply to carceral systems like Rikers Island, exposing limitations in transparency mandates.
 
-
- ## Future Uses and Continuation of Research:
+## Future Uses and Continuation of Research:
 This project offers a foundation for multiple options of future research or expansion:
 
 - **Comparative Policy Analysis**: While this project only scratches the surface, it opens the door to more systematic research into how data transparency laws vary by city and how these differences affect public access to mortality records. Through techniques like web scraping, future researchers could identify policy language and legal frameworks that mandate—or omit—the reporting of deaths, especially in carceral contexts. For example, NYC Open Data frames its mission as more than a one-time effort, stating:
@@ -186,7 +185,6 @@ This project offers a foundation for multiple options of future research or expa
 - **Watchdog Tools**: Journalists or advocacy organizations could use the codebase to monitor cities’ compliance with open data laws or track patterns of omission.
 
 - **Public Interfaces**: With further development, the visualizations and findings from this project could be adapted into a public-facing website or dashboard tracking absence of or lack of updates in municipal death records.
-
 
 ## Project Files:
   - *New York City Data Sets*
