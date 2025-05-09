@@ -58,9 +58,69 @@ results = client.get("f64t-5yiv", limit=1000)  # changed each Data Set Identifie
 results_df = pd.DataFrame.from_records(results)
 ```
 
- - **Data Cleaning**: Any format inconsistencies in the data will be managed using [OpenRefine](https://openrefine.org/), which excels at detecting and correcting anomalies in tabular datasets. This ensures accurate filtering and visualization.
+ - **Data Cleaning**: To ensure consistency and prepare the datasets for analysis and visualization, [**OpenRefine**](https://openrefine.org/) was used as a key tool for cleaning and transforming the raw data retrieved from each city’s open data portal. While the exact steps varied slightly depending on the dataset, the core cleaning tasks included:
 
- - **Data Analysis and Visualization**: Cleaned datasets will be analyzed using Python libraries such as [`pandas`](https://pandas.pydata.org/docs/) for data manipulation and [`plot.ly`](https://plotly.com/) for interactive visualizations. This will enable the exploration of trends and correlations across different variables and cities.
+     - **Removing unnecessary columns** that did not pertain to the research focus (e.g., dropping metadata or unrelated stats).
+     - **Cleaning timestamp values** from date fields (e.g., `date_of_interest`) by splitting strings on the `"T"` delimiter and removing time portions.
+     - **Standardizing numeric formats**, such as stripping trailing decimal zeros from cumulative case and death counts, to ensure accurate rendering in charts.
+     - **Renaming columns** for readability and to streamline future coding operations.
+     - **Filtering by geographic granularity**, retaining only neighborhood- or borough-level information relevant to the mortality data.
+
+     #### Examples by City:
+     - **NYC**: Removed non-essential columns, split and cleaned the `date_of_interest` field, and retained only borough-specific death and case data.
+     - **Chicago**: Dropped irrelevant columns and formatted numeric values (e.g., removing unnecessary decimals from `cases_cumulative`).
+     - **San Francisco**: Cleaned by neighborhood-level detail, renamed columns, and applied similar numeric transformations.
+     - **Austin**: No OpenRefine steps were explicitly recorded, suggesting data was either already clean or processed differently.
+
+     OpenRefine was especially useful for making datasets analysis-ready without writing extensive code-based transformations, allowing for a more flexible and visual approach to cleaning civic data.
+
+
+ - **Data Analysis and Visualization**: Cleaned datasets were analyzed using Python libraries such as [`pandas`](https://pandas.pydata.org/docs/) for data manipulation and [`plot.ly`](https://plotly.com/) for interactive visualizations. This will enable the exploration of trends and correlations across different variables and cities.
+
+
+     #### 🏙️ Examples by City
+
+     - **NYC**:
+     - A **pie chart** was created to show inmate deaths by correctional facility:
+     ```python
+     fig = px.pie(facility_counts, names='facility', values='death_count',
+                    title='Inmate Deaths by Facility in NYC')
+     fig.show()
+     ```
+     - A **line chart** was used to track yearly deaths from accidental poisoning and psychoactive substance use:
+     ```python
+     fig = px.line(yearly_deaths, x='year', y='deaths',
+                    title='NYC Deaths from Accidental Poisoning & Psychoactive Substance Use',
+                    markers=True)
+     fig.show()
+     ```
+
+     - **Chicago**:
+     - A **grouped bar chart** was used to compare cumulative COVID-19 case and death totals by ZIP code:
+     ```python
+     fig = px.bar(df_long, x="zip_code", y="Total", color="Metric", barmode="group",
+                    title="Total COVID-19 Cases and Deaths by ZIP Code (Chicago)")
+     fig.show()
+     ```
+
+     - **Austin**:
+     - A **bar chart** illustrated the number of drug overdose deaths by year:
+     ```python
+     fig = px.bar(results_df_drug, x='year', y='count_of_deaths',
+                    title='Austin Drug Overdose Deaths by Year')
+     fig.show()
+     ```
+
+     - **San Francisco**:
+     - A **line chart** compared overdose death rates by race/ethnicity over a three-year period:
+     ```python
+     fig = px.line(df_drug, x='year', y='overdose_death_rate', color='race_ethnicity',
+                    title='SF Overdose Death Rate Over Time by Race/Ethnicity', markers=True)
+     fig.show()
+     ```
+
+     These visualizations were essential in identifying patterns across time and demographic groups, as well as exposing disparities and data gaps across regions.
+
 
  - **Documentation of Absences**: When a city does not provide a dataset on a particular type of death (e.g., in-custody fatalities), this absence will be noted and visually flagged, building a broader picture of structural omission.
 
