@@ -1,0 +1,23 @@
+Column,incident_id,reported_dt ,incident_type,facility
+0,64622,1/1/15,Suicide,Unknown
+1,68923,6/10/15,Suicide,Unknown
+2,77047,1/29/16,Suicide,Unknown
+3,77355,3/14/16,Suicide,Unknown
+4,90911,4/16/17,Suicide,Unknown
+5,97125,10/8/17,Suicide,RMSC
+6,109391,8/27/18,Suicide,AMKC
+7,141237,10/29/20,Suicide,AMKC
+8,142321,11/22/20,Suicide,MDC
+9,144934,1/22/21,Suicide,OBCC
+10,147916,3/19/21,Suicide,AMKC
+11,149208,4/9/21,Suicide,GRVC
+12,156080,8/10/21,Suicide,OBCC
+13,157050,8/30/21,Suicide,NIC
+14,168625,5/7/22,Suicide,AMKC
+15,173695,8/15/22,Suicide,EMTC
+16,174207,8/25/22,Suicide,AMKC
+17,175176,9/14/22,Suicide,EMTC
+18,177210,10/22/22,Suicide,GRVC
+19,186908,5/16/23,Suicide,GRVC
+20,189619,7/23/23,Suicide,GRVC
+21,203689,7/11/24,Suicide,OBCC

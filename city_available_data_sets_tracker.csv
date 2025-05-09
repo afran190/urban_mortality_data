@@ -1,0 +1,13 @@
+Cities,Data Type,Data Availability,Demographic Available,Special Notes,Notes about visuals,Include Visual on Git? 
+New York City,Inmate Deaths,Yes,No,Only 22 “non-natural” deaths recorded b/w 2016-2024; last updated august of 2024; all are on Riker's with exception of MDC & unknowns ,Pie chart,Yes
+New York City,COVID-19 Deaths,Yes,No ,Only antibody poverty demographics available ,Line chart,No
+New York City,Drug Related Deaths ,Yes,Yes,"Sex + Ethnicity demo's available; not its own data set, had to search for this in ""New York City Leading Causes of Death""; dataset is only between 2007-2014, no data availble after 2014",Line chart,Maybe 
+Chicago ,Inmate Deaths,No,No,No data on anything about prisons; only crime + arrests ,N/A,No
+Chicago ,COVID-19 Deaths,Yes,Yes,"Archived in 2024 data sets are all separately available by zip code (used this data set), age (not accessible anymore), race (cannot call through API) and gender (cannot call through API). Analyzed death amounts by zip code from 2020-2024; further research can be done on socio-economic demographics",*can't get graph to work ,No
+Chicago ,Drug Related Deaths ,No ,No,"Only has an archived ""Selected underlying causes of death in Chicago, 2006–2010""; not drug realted deaths noted",*use snapshot of chart values data (not graph),Yes
+Austin,Inmate Deaths,No,No,Incident reporting available for people in juvenile detention; scanning data set to see any reports of death and returned no deaths reported,N/A,No
+Austin,COVID-19 Deaths,No,No,"Had their own data visualization website; but could not pull any physical data sets; best to use webscrapping, but dynmaic site",N/A,No
+Austin,Drug Related Deaths ,Yes,No,No demographics available; data set it only available upto 2021,Bar Graph,No
+San Francisco,Inmate Deaths,No ,No,Only data available is bookings; very detailed datasets for every other type of topic except this one,N/A,No
+San Francisco,COVID-19 Deaths,Yes,Yes,"Demographics availbale by zip code all archived, but can allow for furhter research into socio-economic stats on these areas; archived now / recorded from May 2020- Sept 2023...Didn't create a visualization of these results because I thought the data totals itself were interesting; only 1,000+ deaths were recorded by zip code during the height of the pandemic; does not account for total deaths ",*use snapshot of chart data (not graph),Yes
+San Francisco,Drug Related Deaths ,Yes,Yes,Demographics available for ethinicity / race; data only goes back to 2020,Line Chart,No
