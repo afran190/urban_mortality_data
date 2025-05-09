@@ -82,25 +82,25 @@ results_df = pd.DataFrame.from_records(results)
 
      #### Examples by City: 
 
- - **NYC**:
-      - A **pie chart** was created to show inmate deaths by correctional facility:
+     - **NYC**:
+          - A **pie chart** was created to show inmate deaths by correctional facility:
 
-     ```python
-          import plotly.express as px
+          ```python
+               import plotly.express as px
 
-          facility_counts = df_inmate['facility'].value_counts().reset_index()
-          facility_counts.columns = ['facility', 'death_count']
+               facility_counts = df_inmate['facility'].value_counts().reset_index()
+               facility_counts.columns = ['facility', 'death_count']
 
-          # Create pie chart
-          fig = px.pie(
-          facility_counts,
-          names='facility',
-          values='death_count',
-          title='Inmate Deaths by Facility in NYC',
-          color='facility'  # Automatically sets distinct colors
-          )
-          fig.show()
-               ```
+               # Create pie chart
+               fig = px.pie(
+               facility_counts,
+               names='facility',
+               values='death_count',
+               title='Inmate Deaths by Facility in NYC',
+               color='facility'  # Automatically sets distinct colors
+               )
+               fig.show()
+                    ```
 
      - **Austin**:
           - A **bar chart** illustrated the number of drug overdose deaths by year:
@@ -149,27 +149,35 @@ The notebook `city_data_tracker.ipynb` was used to:
 
 #### New York City:
 New York City offers relatively broad access to all three data types. However, closer inspection reveals significant limitations:
-- Inmate death data only accounts for 22 “non-natural” deaths between 2016 and 2021, implying potential underreporting or selective categorization.
+
 - COVID-19 data includes poverty demographics from antibody studies, but lacks race/ethnicity details.
 - Drug-related death data is more complete, including sex and ethnicity, but exists as a subset within larger cause-of-death datasets, not as a standalone resource.
+- Inmate death data only accounts for 22 “non-natural” deaths between 2016 and 2021, implying potential underreporting or selective categorization, as seen in the below pie chart:
+![Inmate Deaths by Facility in NYC](nyc_inmate_plot.png)
 
 Despite NYC’s Local Law 11 mandating open data publication, these limitations highlight structural blind spots—especially for populations affected by incarceration or addiction.
 
 #### Chicago
 - No public data on inmate deaths; only general crime reports are available.
 - COVID-19 death records are archived across multiple fragmented datasets.
+- Only has an archived "Selected underlying causes of death in Chicago, 2006–2010" data set; no drug realted deaths found as shown below:
+![Searching for causes of death in data set](chicago_drug_none_plot.jpg)
 
 #### San Francisco:
 - Only jail booking data is available, although it is described as "very detailed," indicating some effort at recordkeeping without transparency around outcomes like deaths.
-- COVID-19 demographic data by zip code is archived (May 2020–Sept 2023), allowing for further socio-economic analysis.
+- COVID-19 demographic data by zip code is archived (May 2020–Sept 2023), allowing for further socio-economic analysis. This data set only covers deaths that had associated zip codes, so totals did not account for all deaths within a zip code:
+![COVID Deaths by Zip Code in SF](sf_covid_plot.jpg)
 
 #### Austin:
 - Incident reports are available for individuals in juvenile detention, but no deaths were reported in the dataset.
 - For COVID-19 Austin uses its own data visualization platform; however, raw datasets are not downloadable—web scraping may be necessary, though the site is dynamic.
-- Drug-related death data is available only through 2021 and lacks demographic details.
+- Drug-related death data is available only through 2021 and lacks demographic details:
+![Austin accidental overdose rates](austin_drug_plot.png)
 
 ---
 ### Key Takeaways:
+
+![City Available Data Tracker](available_data_types_by_city_plot.png)
 
 - **Incarceration-related deaths are under-documented.** No city provides detailed, disaggregated public datasets of in-custody fatalities.
 - **COVID-19 death data is fragmented.** Many cities publish multiple partial or outdated files with minimal standardization.
@@ -213,4 +221,11 @@ This project offers a foundation for multiple options of future research or expa
 - *City Data Availability Tracker*
      - **city_available_data_sets_tracker.csv**: A tracker I built to record which data and demographic details on inmate, COVID-19, and drug-related deaths are available, or missing, for each city. It includes special research notes highlighting anomalies and outdated datasets.
      - **city_data_tracker**: Python Notebook containing plot.ly visualization based on data pulled from city_available_data_sets_tracker.csv
+
+- *Image of some data visualizations from plot.ly*
+     - **austin_drug_plot.png**
+     - **available_data_types_by_city_plot.png**
+     - **chicago_drug_none_plot.jpg**
+     - **nyc_inmate_plot.png**
+     - **sf_covid_plot.jpg** 
 
