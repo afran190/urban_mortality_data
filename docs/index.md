@@ -80,10 +80,11 @@ results_df = pd.DataFrame.from_records(results)
 - Cleaned datasets were analyzed using Python libraries such as [`pandas`](https://pandas.pydata.org/docs/) for data manipulation and [`plot.ly`](https://plotly.com/) for interactive visualizations. This will enable the exploration of trends and correlations across different variables and cities.
 
 
-     ####  Examples by City
+     #### Examples by City
 
      - **NYC**:
           - A **pie chart** was created to show inmate deaths by correctional facility:
+          
           ```python
           import plotly.express as px
 
@@ -187,7 +188,7 @@ This project offers a foundation for multiple options of future research or expa
 - **Public Interfaces**: With further development, the visualizations and findings from this project could be adapted into a public-facing website or dashboard tracking absence of or lack of updates in municipal death records.
 
 
- ## Project Files:
+## Project Files:
   - *New York City Data Sets*
      - **NYC_Data.ipynb**: Python Notebook containing NYC Open Data APIs calling data sets of Inmate, COVID-19, Drug-related deaths; accompained by different plot.ly data visualizations unique to each data set 
      - **NYC_inmate_data_unclean.csv and NYC_covid_data_unclean.csv**: saved csv's with uncleaned data pulled from NYC Open Data
