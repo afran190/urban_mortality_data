@@ -52,6 +52,8 @@ This project offers a foundation for multiple options of future research or expa
 
 
  ## Project Files and Results:
-  - *Title here*: and description
-  - *Title here*: and description
+  - *NYC Data Sets*
+     - **NYC_Data.ipynb**: Python Notebook containing NYC Open Data APIs calling data sets of Inmate, COVID-19, Drug-related deaths; accompained by different plot.ly data visualizations unique to each data set 
+     - **NYC_inmate_data_unclean.csv and NYC_covid_data_unclean.csv**: saved csv's with uncleaned data pulled from NYC Open Data
+     -**NYC_inmate_data_uncleaned.csv, NYC_cvoid_data_clean.csv, NYC_drug_data.csv**: cleaned data post-OpenRefine transformations
 
