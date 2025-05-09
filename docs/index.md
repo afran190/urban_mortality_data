@@ -41,21 +41,22 @@ To carry out this analysis, the project used the following tools, technologies, 
           `!pip install sodapy`
 
      - *Calling in APIs*:
-          -Began with authenticatication via the Socrata Open Data API for each data set I called in. In total nine data sets across the 4 cities were retrieved, although some returned data that did not align with my research scope:
-          `from sodapy import Socrata
-
-               client = Socrata(
-               "data.cityofnewyork.us", #varies based on URL of each city 
-               "YOUR_APP_TOKEN",  # Replaced with my personal app token
-               username="your_email@example.com",
-               password="your_password"
-               )`
-          -Then I pulled each individual date set through the below identifiers:
-          `results = client.get("f64t-5yiv", limit=1000) #changed each Data Set Identifier and limit based on each data set
-           results_df = pd.DataFrame.from_records(results)
-
-
-
+          - Began with authenticatication via the Socrata Open Data API for each data set I called in. In total nine data sets across the 4 cities were retrieved, although some returned data that did not align with my research scope:
+```python
+from sodapy import Socrata
+client = Socrata(
+    "data.cityofnewyork.us",  # varies based on URL of each city 
+    "YOUR_APP_TOKEN",         # Replaced with my personal app token
+    username="your_email@example.com",
+    password="your_password"
+)
+```
+- Then I pulled each individual date set through the below identifiers:
+          
+```python
+results = client.get("f64t-5yiv", limit=1000)  # changed each Data Set Identifier and limit based on each data set
+results_df = pd.DataFrame.from_records(results)
+```
 
  - **Data Cleaning**: Any format inconsistencies in the data will be managed using [OpenRefine](https://openrefine.org/), which excels at detecting and correcting anomalies in tabular datasets. This ensures accurate filtering and visualization.
 
