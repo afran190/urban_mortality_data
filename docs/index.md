@@ -51,9 +51,14 @@ This project offers a foundation for multiple options of future research or expa
 - **Public Interfaces**: With further development, the visualizations and findings could be adapted into a public-facing website or dashboard tracking absence of or lack of updates in municipal death records.
 
 
- ## Project Files and Results:
-  - *NYC Data Sets*
+ ## Project Files:
+  - *New York City Data Sets*
      - **NYC_Data.ipynb**: Python Notebook containing NYC Open Data APIs calling data sets of Inmate, COVID-19, Drug-related deaths; accompained by different plot.ly data visualizations unique to each data set 
      - **NYC_inmate_data_unclean.csv and NYC_covid_data_unclean.csv**: saved csv's with uncleaned data pulled from NYC Open Data
-     - **NYC_inmate_data_uncleaned.csv, NYC_cvoid_data_clean.csv, NYC_drug_data.csv**: cleaned data post-OpenRefine transformations
+     - **NYC_inmate_data_uncleaned.csv, NYC_covid_data_clean.csv, NYC_drug_data.csv**: cleaned data post-OpenRefine transformations
+
+- *San Francisco Data Sets*
+     - **SF_Data.ipynb**: Python Notebook containing SF Open Data APIs calling data sets of Inmate, COVID-19, Drug-related deaths; accompained by different plot.ly data visualizations unique to each data set, *if applicable*. 
+     - **SF_drug_data_unclean.csv and SF_covid_data_unclean.csv**: saved csv's with uncleaned data pulled from SF Open Data
+     - **SF_drug_data_uncleaned.csv, and SF_cvoid_data_clean.csv**: cleaned data post-OpenRefine transformations
 
