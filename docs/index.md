@@ -134,9 +134,8 @@ This spreadsheet records which cities provided datasets in the following categor
 
 #### Notebook: `city_data_tracker.ipynb`
 
-This notebook was used to:
+The notebook `city_data_tracker.ipynb` was used to:
 - Read in the CSV tracker as a DataFrame
-- Group and display notes by city using pandas
 - Visually summarize absence patterns for reporting
 
  ## Findings and Analysis:
