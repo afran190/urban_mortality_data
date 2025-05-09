@@ -58,7 +58,12 @@ This project offers a foundation for multiple options of future research or expa
      - **NYC_inmate_data_uncleaned.csv, NYC_covid_data_clean.csv, NYC_drug_data.csv**: cleaned data post-OpenRefine transformations
 
 - *San Francisco Data Sets*
-     - **SF_Data.ipynb**: Python Notebook containing SF Open Data APIs calling data sets of Inmate, COVID-19, Drug-related deaths; accompained by different plot.ly data visualizations unique to each data set, *if applicable*. 
+     - **SF_Data.ipynb**: Python Notebook containing SF Open Data APIs calling data sets of COVID-19 and Drug-related deaths; accompained by different plot.ly data visualizations unique to each data set, *if applicable*. 
      - **SF_drug_data_unclean.csv and SF_covid_data_unclean.csv**: saved csv's with uncleaned data pulled from SF Open Data
-     - **SF_drug_data_uncleaned.csv, and SF_cvoid_data_clean.csv**: cleaned data post-OpenRefine transformations
+     - **SF_drug_data_uncleaned.csv and SF_cvoid_data_clean.csv**: cleaned data post-OpenRefine transformations
+
+- *Austin Data Sets*
+     - **Austin_Data.ipynb**: Python Notebook containing Austin Open Data APIs calling data sets of Inmate and Drug-related deaths; accompained by different plot.ly data visualizations unique to each data set, *if applicable*. 
+     - **Asutin_drug_data.csv: saved csv's with data pulled from Austin Open Data; no OpenRefine cleaning needed
+   
 
