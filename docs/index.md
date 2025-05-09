@@ -73,5 +73,7 @@ This project offers a foundation for multiple options of future research or expa
      - **Chicago_covid_data_sums.csv**: trasnformed data from Chicago_covid_data_clean.csv dataset 
      - **Chicago_covid_data_sums_clean**: cleaned data post-OpenRefine transformations
 
-- **city_available_data_sets_tracker.csv**: A tracker I built to record which data and demographic details on inmate, COVID-19, and drug-related deaths are available, or missing, for each city. It includes special research notes highlighting anomalies and outdated datasets.
+- *City Data Availability Tracker*
+     - **city_available_data_sets_tracker.csv**: A tracker I built to record which data and demographic details on inmate, COVID-19, and drug-related deaths are available, or missing, for each city. It includes special research notes highlighting anomalies and outdated datasets.
+     - **city_data_tracker**: Python Notebook containing plot.ly visualization based on data pulled from city_available_data_sets_tracker.csv
 
