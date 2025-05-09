@@ -66,4 +66,9 @@ This project offers a foundation for multiple options of future research or expa
      - **Austin_Data.ipynb**: Python Notebook containing Austin Open Data APIs calling data sets of Inmate and Drug-related deaths; accompained by different plot.ly data visualizations unique to each data set, *if applicable*. 
      - **Asutin_drug_data.csv: saved csv's with data pulled from Austin Open Data; no OpenRefine cleaning needed
    
-
+- *Chicago Data Sets*
+     - **Chicago_Data.ipynb**: Python Notebook containing Chicago Open Data APIs calling data sets of COVID-19 and Drug-related deaths; accompained by different plot.ly data visualizations unique to each data set, *if applicable*. 
+     - **Chicago_covid_data_unclean.csv and Chicago_drug_data_none.csv**: saved csv's with uncleaned data pulled from Chicago Open Data
+     - **Chicago_covid_data_clean.csv**: cleaned data post-OpenRefine transformations
+     - **Chicago_covid_data_sums.csv**: trasnformed data from Chicago_covid_data_clean.csv dataset 
+     - **Chicago_covid_data_sums_clean**: cleaned data post-OpenRefine transformations
