@@ -72,7 +72,7 @@ results_df = pd.DataFrame.from_records(results)
      - **NYC**: Removed non-essential columns, split and cleaned the `date_of_interest` field, and retained only borough-specific death and case data.
      - **Chicago**: Dropped irrelevant columns and formatted numeric values (e.g., removing unnecessary decimals from `cases_cumulative`).
      - **San Francisco**: Cleaned by neighborhood-level detail, renamed columns, and applied similar numeric transformations.
-     - **Austin**: No OpenRefine steps were explicitly recorded, suggesting data was either already clean or processed differently.
+     - **Austin**: No OpenRefine steps were explicitly recorded.
 
      OpenRefine was especially useful for making datasets analysis-ready without writing extensive code-based transformations, allowing for a more flexible and visual approach to cleaning civic data.
 
@@ -80,14 +80,13 @@ results_df = pd.DataFrame.from_records(results)
 - Cleaned datasets were analyzed using Python libraries such as [`pandas`](https://pandas.pydata.org/docs/) for data manipulation and [`plot.ly`](https://plotly.com/) for interactive visualizations. This will enable the exploration of trends and correlations across different variables and cities.
 
 
-     #### Examples by City: 
+     **Examples by City:** 
 
      - **NYC**:
           - A **pie chart** was created to show inmate deaths by correctional facility:
 
           ```python
                import plotly.express as px
-
                facility_counts = df_inmate['facility'].value_counts().reset_index()
                facility_counts.columns = ['facility', 'death_count']
 
@@ -123,25 +122,25 @@ results_df = pd.DataFrame.from_records(results)
 ### Documentation of Absences: 
 - The documentation of absences became a critical part of the project narrative, highlighting which populations, causes, and events were systematically underreported, or entirely unrecorded, despite the presence of open data infrastructures. To complement the structured analysis of available datasets, I also created a **tracker** (`city_available_data_sets_tracker.csv`) to document where data was missing, incomplete, or obscured across city open data portals.
 
-This spreadsheet records which cities provided datasets in the following categories:
-  - Inmate Deaths
-  - COVID-19 Deaths
-  - Drug-Related Deaths
+     This spreadsheet records which cities provided datasets in the following categories:
+     - Inmate Deaths
+     - COVID-19 Deaths
+     - Drug-Related Deaths
 
- For each city and dataset type, the tracker includes:
-  - A **yes/no indicator** for both data availability and demographic breakdowns
-  - A **Special Notes** column that describes anomalies, outdated datasets, or known gaps in coverage
+     For each city and dataset type, the tracker includes:
+     - A **yes/no indicator** for both data availability and demographic breakdowns
+     - A **Special Notes** column that describes anomalies, outdated datasets, or known gaps in coverage
 
 
-#### Notebook: `city_data_tracker.ipynb`
+     #### Notebook: `city_data_tracker.ipynb`
 
-The notebook `city_data_tracker.ipynb` was used to:
-- Read in the CSV tracker as a DataFrame
-- Visually summarize absence patterns for reporting
+     The notebook `city_data_tracker.ipynb` was used to:
+     - Read in the CSV tracker as a DataFrame
+     - Visually summarize absence patterns for reporting
 
 
 ## Findings and Analysis:
-- Based on the compiled tracker, the analysis of publicly available death datasets across U.S. cities reveals notable inconsistencies in both data availability and transparency—particularly around inmate deaths, COVID-19 fatalities, and drug-related deaths. The “Special Notes” column in the spreadsheet surfaces key anomalies, gaps, and archival issues that significantly impact the comprehensiveness and usability of each dataset.
+- Based on the compiled tracker, the analysis of publicly available mortality datasets across U.S. cities reveals notable inconsistencies in both data availability and transparency; particularly around deaths of people who are incarcerated, COVID-19 fatalities, and drug-related deaths. The “Special Notes” column in the spreadsheet surfaces key anomalies, gaps, and archival issues that significantly impact the comprehensiveness and usability of each dataset.
 
 ---
 
@@ -159,18 +158,18 @@ Despite NYC’s Local Law 11 mandating open data publication, these limitations 
 
 #### Chicago
 - No public data on inmate deaths; only general crime reports are available.
-- COVID-19 death records are archived across multiple fragmented datasets.
+- COVID-19 death records that reflect demographics are archived across multiple fragmented datasets.
 - Only has an archived "Selected underlying causes of death in Chicago, 2006–2010" data set; no drug realted deaths found as shown below:
 ![Searching for causes of death in data set](chicago_drug_none_plot.jpg)
 
 #### San Francisco:
-- Only jail booking data is available, although it is described as "very detailed," indicating some effort at recordkeeping without transparency around outcomes like deaths.
-- COVID-19 demographic data by zip code is archived (May 2020–Sept 2023), allowing for further socio-economic analysis. This data set only covers deaths that had associated zip codes, so totals did not account for all deaths within a zip code:
+- Only jail booking data is available indicating some effort at recordkeeping, but without transparency around outcomes like deaths.
+- COVID-19 demographic data by zip code is archived (May 2020–Sept 2023), allowing for some further socio-economic analysis. This data set only covers deaths that had associated zip codes, so totals did not account for all deaths within a zip code:
 ![COVID Deaths by Zip Code in SF](sf_covid_plot.jpg)
 
 #### Austin:
 - Incident reports are available for individuals in juvenile detention, but no deaths were reported in the dataset.
-- For COVID-19 Austin uses its own data visualization platform; however, raw datasets are not downloadable—web scraping may be necessary, though the site is dynamic.
+- For COVID-19, Austin uses its own data visualization platform; however, raw datasets are not downloadable; web scraping may be necessary, though the site is dynamic.
 - Drug-related death data is available only through 2021 and lacks demographic details:
 ![Austin accidental overdose rates](austin_drug_plot.png)
 
@@ -187,13 +186,13 @@ Despite NYC’s Local Law 11 mandating open data publication, these limitations 
 ## Future Uses and Continuation of Research:
 This project offers a foundation for multiple options of future research or expansion:
 
-- **Comparative Policy Analysis**: While this project only scratches the surface, it opens the door to more systematic research into how data transparency laws vary by city and how these differences affect public access to mortality records. Through techniques like web scraping, future researchers could identify policy language and legal frameworks that mandate—or omit—the reporting of deaths, especially in carceral contexts. For example, NYC Open Data frames its mission as more than a one-time effort, stating:
+- **Comparative Policy Analysis**: While this project only scratches the surface, it opens the door to more systematic research into how data transparency laws vary by city and how these differences affect public access to mortality records. Through techniques like web scraping, future researchers could identify policy language and legal frameworks that mandate, *or omit*, the reporting of deaths, especially in carceral contexts. For example, NYC Open Data frames its mission as more than a one-time effort, stating:
 
           “We at the Open Data Team don’t just want to 'open' data, we want to keep opening it with continuous, incremental improvements to the level of transparency, access, and accountability of NYC Open Data.”
 
 - **Watchdog Tools**: Journalists or advocacy organizations could use the codebase to monitor cities’ compliance with open data laws or track patterns of omission.
 
-- **Public Interfaces**: With further development, the visualizations and findings from this project could be adapted into a public-facing website or dashboard tracking absence of or lack of updates in municipal death records.
+- **Public Interfaces**: With further development, the visualizations and findings from this project could be adapted into a public-facing website or dashboard, tracking the absence of *or* lack of updates in municipal death records.
 
 
 ## Project Files: 
@@ -227,5 +226,4 @@ This project offers a foundation for multiple options of future research or expa
      - **available_data_types_by_city_plot.png**
      - **chicago_drug_none_plot.jpg**
      - **nyc_inmate_plot.png**
-     - **sf_covid_plot.jpg** 
-
+     - **sf_covid_plot.jpg**
