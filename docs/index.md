@@ -87,6 +87,7 @@ results_df = pd.DataFrame.from_records(results)
 
           ```python
                import plotly.express as px
+               
                facility_counts = df_inmate['facility'].value_counts().reset_index()
                facility_counts.columns = ['facility', 'death_count']
 
