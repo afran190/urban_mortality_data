@@ -131,9 +131,6 @@ results_df = pd.DataFrame.from_records(results)
      - A **yes/no indicator** for both data availability and demographic breakdowns
      - A **Special Notes** column that describes anomalies, outdated datasets, or known gaps in coverage
 
-
-     #### Notebook: `city_data_tracker.ipynb`
-
      The notebook `city_data_tracker.ipynb` was used to:
      - Read in the CSV tracker as a DataFrame
      - Visually summarize absence patterns for reporting
