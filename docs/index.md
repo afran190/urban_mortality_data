@@ -72,7 +72,7 @@ results_df = pd.DataFrame.from_records(results)
      - **NYC**: Removed non-essential columns, split and cleaned the `date_of_interest` field, and retained only borough-specific death and case data.
      - **Chicago**: Dropped irrelevant columns and formatted numeric values (e.g., removing unnecessary decimals from `cases_cumulative`).
      - **San Francisco**: Cleaned by neighborhood-level detail, renamed columns, and applied similar numeric transformations.
-     - **Austin**: No OpenRefine steps were explicitly recorded, suggesting data was either already clean or processed differently.
+     - **Austin**: No OpenRefine steps were explicitly recorded.
 
      OpenRefine was especially useful for making datasets analysis-ready without writing extensive code-based transformations, allowing for a more flexible and visual approach to cleaning civic data.
 
